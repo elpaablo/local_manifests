@@ -2,33 +2,46 @@
 <manifest>
 
     <remote name="inferno0230"
-            fetch="https://github.com/OnePlus12R-development" />
+            fetch="https://github.com/OnePlus12R-development"
+            revision="refs/heads/lineage-21" />
+
+    <remote name="elpaablo"
+            fetch="https://github.com/elpaablo"
+            revision="refs/heads/alpha-15-wip" />"
+
+    <!--<remote name="alpha-devices"
+            fetch="https://github.com/alphadroid-devices"
+            revision="refs/heads/alpha-14" />"
+
+    <remote name="alpha"
+            fetch="https://github.com/alphadroid-project"
+    revision="refs/heads/alpha-15" />"-->
 
     <!-- device tree deps-->
-    <project path="device/oneplus/aston" name="android_device_oneplus_aston" revision="lineage-21" remote="inferno0230" />
-
-    <!-- Wtf is this. Why tf is this>
-    <project path="device/oneplus/aston-kernel" name="android_device_oneplus_aston-kernel" revision="lineage-21" remote="inferno0230" /-->
+    <project path="device/oneplus/aston" name="device_oneplus_aston" remote="elpaablo" revision="alpha-15-wip" />
 
     <!-- common tree -->
-    <project path="device/oneplus/sm8550-common" name="android_device_oneplus_sm8550-common" revision="lineage-21" remote="inferno0230" />
+    <project path="device/oneplus/sm8550-common" name="device_oneplus_sm8550-common" remote="elpaablo" revision="alpha-15-wip"/>
 
     <!-- ktree -->
-    <project path="kernel/oneplus/sm8550" name="android_kernel_oneplus_sm8550" revision="lineage-21" remote="inferno0230" />
+    <project path="kernel/oneplus/sm8550" name="PixelOS-Devices/kernel_oneplus_sm8550" remote="github" revision="fourteen" />
 
     <!-- kmod -->
-    <project path="kernel/oneplus/sm8550-modules" name="android_kernel_oneplus_sm8550-modules" revision="lineage-21" remote="inferno0230" />
+    <project path="kernel/oneplus/sm8550-modules" name="PixelOS-Devices/kernel_oneplus_sm8550-modules" remote="github" revision="fourteen" />
 
     <!-- kdtsi -->
-    <project path="kernel/oneplus/sm8550-devicetrees" name="android_kernel_oneplus_sm8550-devicetrees" revision="lineage-21" remote="inferno0230" />
+    <project path="kernel/oneplus/sm8550-devicetrees" name="PixelOS-Devices/kernel_oneplus_sm8550-devicetrees" remote="github" revision="fourteen" />
 
     <!-- hardware/oplus -->
-    <project path="hardware/oplus" name="android_hardware_oplus" revision="lineage-21" remote="inferno0230" />
+    <project path="hardware/oplus" name="hardware_oplus" remote="elpaablo" revision="alpha-15-wip" />
 
     <!-- vendor device -->
-    <project path="vendor/oneplus/aston" name="proprietary_vendor_oneplus_aston" revision="lineage-21" remote="inferno0230" />
+    <project path="vendor/oneplus/aston" name="vendor_oneplus_aston" remote="elpaablo" revision="alpha-15-wip" />
 
     <!-- vendor common -->
-    <project path="vendor/oneplus/sm8550-common" name="proprietary_vendor_oneplus_sm8550-common" revision="lineage-21" remote="inferno0230" />
+    <project path="vendor/oneplus/sm8550-common" name="vendor_oneplus_sm8550-common" remote="elpaablo" revision="alpha-15-wip" />
+
+    <!--<project path="device/qcom/common" name="AOSPA/android_device_qcom_common" remote="github" revision="uvite" />-
+    <project path="vendor/qcom/common" name="ThankYouMario/proprietary_vendor_qcom_common" remote="github" revision="uvite" />-->
 
 </manifest>
